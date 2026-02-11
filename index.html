@@ -1,114 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adil Ali | Web Developer</title>
-    <meta name="description" content="Professional portfolio of Adil Ali, a Full Stack Developer with 5+ years of experience creating responsive web applications.">
+    <meta name="description"
+        content="Professional portfolio of Adil Ali, a Full Stack Developer with 5+ years of experience creating responsive web applications.">
     <meta name="keywords" content="web developer, full stack developer, frontend, backend, javascript, react, node.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <base target="_blank" rel="noopener noreferrer">
+    <base target="_blank" rel="noopener noreferrer">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootsrape/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
 </head>
+
 <body>
-    
+
     <!-- Header & Navigation -->
-<header class="header">
-    <div class="container nav-container">
-        <!-- Logo -->
-        <a href="#" class="logo">ADIL <span>ALI</span></a>
-        
-        <!-- Desktop Navigation (Visible on larger screens) -->
-        <nav class="desktop-nav">
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Right Side Controls -->
-        <div class="nav-controls">
-            <!-- Theme Toggle -->
-           <div class="theme-toggle-wrapper">
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <div class="toggle-track">
-            <div class="toggle-thumb">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
+    <header class="header">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="#" class="logo">ADIL <span>ALI</span></a>
+
+            <!-- Desktop Navigation (Visible on larger screens) -->
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right Side Controls -->
+            <div class="nav-controls">
+                <!-- Theme Toggle -->
+                <div class="theme-toggle-wrapper">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <div class="toggle-track">
+                            <div class="toggle-thumb">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </div>
+                        </div>
+                        <span class="toggle-label">Dark Mode</span>
+                    </button>
+                </div>
+
+                <!-- Hamburger Button (Visible only on mobile) -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-icon">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                        <span class="bar bar3"></span>
+                    </span>
+                </button>
             </div>
         </div>
-        <span class="toggle-label">Dark Mode</span>
-    </button>
-</div>
-            
-            <!-- Hamburger Button (Visible only on mobile) -->
-            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false">
-                <span class="hamburger-icon">
-                    <span class="bar bar1"></span>
-                    <span class="bar bar2"></span>
-                    <span class="bar bar3"></span>
-                </span>
-            </button>
-        </div>
-    </div>
-    
-    <!-- Mobile Navigation Menu (Hidden by default) -->
-    <div class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav-container">
-            <ul class="mobile-nav-links">
-                <li><a href="#home" class="mobile-nav-link">
-                    <i class="fas fa-home"></i> Home
-                </a></li>
-                <li><a href="#about" class="mobile-nav-link">
-                    <i class="fas fa-user"></i> About
-                </a></li>
-                <li><a href="#skills" class="mobile-nav-link">
-                    <i class="fas fa-code"></i> Skills
-                </a></li>
-                <li><a href="#projects" class="mobile-nav-link">
-                    <i class="fas fa-briefcase"></i> Projects
-                </a></li>
-                <li><a href="#services" class="mobile-nav-link">
-                    <i class="fas fa-cogs"></i> Services
-                </a></li>
-                <li><a href="#contact" class="mobile-nav-link">
-                    <i class="fas fa-envelope"></i> Contact
-                </a></li>
-            </ul>
-            
-            <div class="mobile-nav-footer">
-                <div class="mobile-contact-info">
-                    <a href="mailto:adilkavin110@gmail.com" class="mobile-email">
-                        <i class="fas fa-envelope"></i> adilkavin110@gmail.com
-                    </a>
-                    <a href="tel:+923069363293" class="mobile-phone">
-                        <i class="fas fa-phone"></i> +92 306 9363293
-                    </a>
-                </div>
-                <div class="mobile-social-links">
-                    <a href="#" class="mobile-social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="mobile-social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="mobile-social-link"><i class="fab fa-twitter"></i></a>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-container">
+                <ul class="mobile-nav-links">
+                    <li><a href="#home" class="mobile-nav-link">
+                            <i class="fas fa-home"></i> Home
+                        </a></li>
+                    <li><a href="#about" class="mobile-nav-link">
+                            <i class="fas fa-user"></i> About
+                        </a></li>
+                    <li><a href="#skills" class="mobile-nav-link">
+                            <i class="fas fa-code"></i> Skills
+                        </a></li>
+                    <li><a href="#projects" class="mobile-nav-link">
+                            <i class="fas fa-briefcase"></i> Projects
+                        </a></li>
+                    <li><a href="#services" class="mobile-nav-link">
+                            <i class="fas fa-cogs"></i> Services
+                        </a></li>
+                    <li><a href="#contact" class="mobile-nav-link">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a></li>
+                </ul>
+
+                <div class="mobile-nav-footer">
+                    <div class="mobile-contact-info">
+                        <a href="mailto:adilkavin110@gmail.com" class="mobile-email">
+                            <i class="fas fa-envelope"></i> adilkavin110@gmail.com
+                        </a>
+                        <a href="tel:+923069363293" class="mobile-phone">
+                            <i class="fas fa-phone"></i> +92 306 9363293
+                        </a>
+                    </div>
+                    <div class="mobile-social-links">
+                        <a href="#" class="mobile-social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="mobile-social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="mobile-social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <!-- Hero Section -->
-     <section id="home" class="hero">
+    <section id="home" class="hero">
         <!-- Decorative background elements -->
         <div class="decoration decoration-1"></div>
         <div class="decoration decoration-2"></div>
-        
+
         <div class="container hero-content">
             <!-- Text Content -->
             <div class="hero-text">
@@ -116,12 +121,13 @@
                 <p class="title">Website and Apps Developer</p>
                 <p>Creating responsive, user-centered web applications with modern technologies and clean code.</p>
             </div>
-            
+
             <!-- Circular Image (appears before buttons on mobile) -->
             <div class="hero-image">
                 <div class="avatar">
-                    <img src="/portfolio/picture/mypicture2.jpeg" alt="">
-                    <div style="width:100%; height:100%; background: linear-gradient(45deg, #1a1a2e, #00adb5); display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:1.5rem; text-align:center; padding:20px;">
+                    <img src="picture/mypicture2.jpeg" alt="Adil Ali">
+                    <div
+                        style="width:100%; height:100%; background: linear-gradient(45deg, #1a1a2e, #00adb5); display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:1.5rem; text-align:center; padding:20px;">
                         <div>
                             <div style="font-size:2rem; margin-bottom:10px;">AA</div>
                             Adil Ali
@@ -129,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Buttons (appear after image on mobile) -->
             <div class="hero-btns">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -144,9 +150,16 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Me</h2>
-                    <p>I'm a passionate <span class="highlight">Web Developer</span> with <span class="experience-years">2 years</span> of experience building web applications that solve real-world problems. I specialize in creating responsive, accessible, and performant digital experiences.</p>
-                    <p>My expertise spans both frontend and backend development, with a focus on JavaScript ecosystems. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
-                    <p>When I'm not coding, I contribute to open-source projects, write technical articles, and mentor aspiring developers. I believe in <span class="highlight">clean code</span>, <span class="highlight">continuous learning</span>, and creating technology that enhances people's lives.</p>
+                    <p>I'm a passionate <span class="highlight">Web Developer</span> with <span
+                            class="experience-years">2 years</span> of experience building web applications that solve
+                        real-world problems. I specialize in creating responsive, accessible, and performant digital
+                        experiences.</p>
+                    <p>My expertise spans both frontend and backend development, with a focus on JavaScript ecosystems.
+                        I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+                    <p>When I'm not coding, I contribute to open-source projects, write technical articles, and mentor
+                        aspiring developers. I believe in <span class="highlight">clean code</span>, <span
+                            class="highlight">continuous learning</span>, and creating technology that enhances people's
+                        lives.</p>
                 </div>
                 <div class="about-image">
                     <div class="skill-category fade-in">
@@ -154,7 +167,7 @@
                         <ul class="skill-list">
                             <li class="skill-item">Matric Computer Science</li>
                             <li class="skill-item">DAE CIT (Computr Information Technology)</li>
-                          
+
                         </ul>
                     </div>
                 </div>
@@ -186,20 +199,20 @@
                         <span class="skill-item">MySQL</span>
                     </div>
                 </div>
-               
+
                 <div class="skill-category fade-in">
                     <h3><i class="fas fa-tools"></i> Tools </h3>
                     <div class="skill-list">
                         <span class="skill-item">Git</span>
                         <span class="skill-item">VS code</span>
                         <span class="skill-item">Chrome DevTool</span>
-                       
+
                     </div>
                 </div>
             </div>
-                
-                </div>
-            </div>
+
+        </div>
+        </div>
         </div>
     </section>
 
@@ -213,26 +226,30 @@
                 <!-- Project 1 -->
                 <div class="project-card fade-in">
                     <div class="project-img">
-                    <i class="fas fa-clipboard-list"></i>
+                        <i class="fas fa-clipboard-list"></i>
                     </div>
                     <div class="project-info">
                         <h3>Student Management System</h3>
-                        <p>A full-stack e-commerce platform with admin dashboard, user authentication, and real-time inventory management. Improved load time by 40% through code splitting and image optimization.</p>
+                        <p>A full-stack e-commerce platform with admin dashboard, user authentication, and real-time
+                            inventory management. Improved load time by 40% through code splitting and image
+                            optimization.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>Bootstrap</span>
                             <span>JavaScript</span>
-                        
-                          
+
+
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Adil-Developer110/student_managment_system/blob/main/student_managment.js" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://ecommerce-demo.example.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Adil-Developer110/student_managment_system/blob/main/student_managment.js"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://ecommerce-demo.example.com" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="project-card fade-in">
                     <div class="project-img">
@@ -240,38 +257,44 @@
                     </div>
                     <div class="project-info">
                         <h3>College Website</h3>
-                        <p>A collaborative task management application with drag-and-drop functionality, real-time updates, and team collaboration features. Supports offline mode with service workers.</p>
+                        <p>A collaborative task management application with drag-and-drop functionality, real-time
+                            updates, and team collaboration features. Supports offline mode with service workers.</p>
                         <div class="project-tech">
-                            
+
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                             <span>Bootstrap</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/example/taskflow" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://taskflow.example.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/example/taskflow" target="_blank"><i class="fab fa-github"></i>
+                                Code</a>
+                            <a href="https://taskflow.example.com" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="project-card fade-in">
                     <div class="project-img">
-                       <i class="fas fa-money-check-alt"></i>
+                        <i class="fas fa-money-check-alt"></i>
                     </div>
                     <div class="project-info">
                         <h3>Bank Management System</h3>
-                        <p>A financial analytics dashboard that integrates with multiple APIs to provide real-time market data, portfolio tracking, and predictive analytics using machine learning models.</p>
+                        <p>A financial analytics dashboard that integrates with multiple APIs to provide real-time
+                            market data, portfolio tracking, and predictive analytics using machine learning models.</p>
                         <div class="project-tech">
-                             <span>HTML</span>
+                            <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                             <span>Bootstrap</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/example/finance-dash" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://finance-dash.example.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/example/finance-dash" target="_blank"><i
+                                    class="fab fa-github"></i> Code</a>
+                            <a href="https://finance-dash.example.com" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -291,31 +314,35 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Custom Web Development</h3>
-                    <p>Tailored web applications built with modern frameworks to meet your specific business requirements and user needs.</p>
+                    <p>Tailored web applications built with modern frameworks to meet your specific business
+                        requirements and user needs.</p>
                 </div>
-                
+
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Responsive Web Design</h3>
-                    <p>Websites that look and function perfectly on all devices, from mobile phones to desktop computers.</p>
+                    <p>Websites that look and function perfectly on all devices, from mobile phones to desktop
+                        computers.</p>
                 </div>
-                
+
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-plug"></i>
                     </div>
                     <h3>API Development & Integration</h3>
-                    <p>RESTful and GraphQL APIs for your applications, plus seamless integration with third-party services.</p>
+                    <p>RESTful and GraphQL APIs for your applications, plus seamless integration with third-party
+                        services.</p>
                 </div>
-                
+
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3>Performance Optimization</h3>
-                    <p>Improve your website's speed, SEO, and user experience through code optimization and best practices.</p>
+                    <p>Improve your website's speed, SEO, and user experience through code optimization and best
+                        practices.</p>
                 </div>
             </div>
         </div>
@@ -370,7 +397,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form fade-in">
                     <h3>Send a Message</h3>
                     <form id="contactForm">
@@ -381,7 +408,8 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com"
+                                required>
                             <div class="error-message" id="emailError">Please enter a valid email address</div>
                         </div>
                         <div class="form-group">
@@ -391,7 +419,8 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
+                            <textarea id="message" class="form-control" placeholder="Tell me about your project..."
+                                required></textarea>
                             <div class="error-message" id="messageError">Please enter your message</div>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
@@ -412,5 +441,6 @@
         </div>
     </footer>
 </body>
-<script src="js/script.js" ></script>
+<script src="js/script.js"></script>
+
 </html>

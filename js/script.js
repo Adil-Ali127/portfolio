@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== Form Validation =====
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
             let isValid = true;
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset validation on input
     document.querySelectorAll('.form-control').forEach(input => {
-        input.addEventListener('input', function() {
+        input.addEventListener('input', function () {
             const errorElement = document.getElementById(this.id + 'Error');
             if (errorElement) {
                 errorElement.style.display = 'none';
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== Smooth scrolling =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
@@ -193,16 +193,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ===== Typing Animation =====
+    const titleElement = document.querySelector('.hero-text .title');
+    if (titleElement) {
+        const text = titleElement.textContent;
+        titleElement.textContent = '';
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                titleElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        // Start typing after a short delay
+        setTimeout(typeWriter, 500);
+    }
+
     // ===== Navbar Scroll Effect =====
     window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (navbar) {
+        const header = document.querySelector('.header');
+        if (header) {
             if (window.scrollY > 50) {
-                navbar.style.padding = '0.5rem 1.5rem';
-                navbar.style.boxShadow = '0 4px 25px rgba(0, 0, 0, 0.2)';
+                header.style.padding = '0.5rem 0';
+                header.style.boxShadow = '0 4px 25px rgba(0, 0, 0, 0.2)';
+                header.classList.add('scrolled');
             } else {
-                navbar.style.padding = '0.8rem 1.5rem';
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+                header.style.padding = '1.2rem 0';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.classList.remove('scrolled');
             }
         }
     });
@@ -210,79 +231,68 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('JS Loaded Successfully!');
 
 }); // End of DOMContentLoaded
- // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.padding = '15px 0';
-                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-            } else {
-                navbar.style.padding = '25px 0';
-                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            }
-        });
 
-        // Smooth scroll for CTA button
-        document.querySelector('.nav-cta').addEventListener('click', function(e) {
-            e.preventDefault();
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-                window.scrollTo({
-                    top: contactSection.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
+// Smooth scroll for CTA button
+document.querySelector('.nav-cta').addEventListener('click', function (e) {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        window.scrollTo({
+            top: contactSection.offsetTop - 80,
+            behavior: 'smooth'
         });
+    }
+});
 
-        // Button hover effects
-        const buttons = document.querySelectorAll('.btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px)';
-            });
-            
-            btn.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
+// Button hover effects
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-3px)';
+    });
 
-        // Floating dots animation enhancement
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, index) => {
-            dot.style.animationDuration = `${15 + index * 2}s`;
-        });
+    btn.addEventListener('mouseleave', function () {
+        this.style.transform = 'translateY(0)';
+    });
+});
 
-        // Tech icons hover effect
-        const techIcons = document.querySelectorAll('.tech-icon');
-        techIcons.forEach(icon => {
-            icon.addEventListener('mouseenter', function() {
-                this.style.color = '#2563eb';
-                this.style.transform = 'translateY(-3px) scale(1.2)';
-            });
-            
-            icon.addEventListener('mouseleave', function() {
-                this.style.color = '#94a3b8';
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
+// Floating dots animation enhancement
+const dots = document.querySelectorAll('.dot');
+dots.forEach((dot, index) => {
+    dot.style.animationDuration = `${15 + index * 2}s`;
+});
 
-        // Simple page load animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const heroContent = document.querySelector('.hero-content');
-            const heroImage = document.querySelector('.hero-image');
-            
-            heroContent.style.opacity = '0';
-            heroContent.style.transform = 'translateY(30px)';
-            heroImage.style.opacity = '0';
-            heroImage.style.transform = 'translateY(30px)';
-            
-            setTimeout(() => {
-                heroContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                heroContent.style.opacity = '1';
-                heroContent.style.transform = 'translateY(0)';
-                
-                heroImage.style.transition = 'opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s';
-                heroImage.style.opacity = '1';
-                heroImage.style.transform = 'translateY(0)';
-            }, 300);
-        });
+// Tech icons hover effect
+const techIcons = document.querySelectorAll('.tech-icon');
+techIcons.forEach(icon => {
+    icon.addEventListener('mouseenter', function () {
+        this.style.color = '#2563eb';
+        this.style.transform = 'translateY(-3px) scale(1.2)';
+    });
+
+    icon.addEventListener('mouseleave', function () {
+        this.style.color = '#94a3b8';
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Simple page load animation
+document.addEventListener('DOMContentLoaded', function () {
+    const heroContent = document.querySelector('.hero-content');
+    const heroImage = document.querySelector('.hero-image');
+
+    heroContent.style.opacity = '0';
+    heroContent.style.transform = 'translateY(30px)';
+    heroImage.style.opacity = '0';
+    heroImage.style.transform = 'translateY(30px)';
+
+    setTimeout(() => {
+        heroContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        heroContent.style.opacity = '1';
+        heroContent.style.transform = 'translateY(0)';
+
+        heroImage.style.transition = 'opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s';
+        heroImage.style.opacity = '1';
+        heroImage.style.transform = 'translateY(0)';
+    }, 300);
+});
