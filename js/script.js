@@ -114,56 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== Theme Toggle =====
-    const themeToggle = document.getElementById("themeToggle");
-    if (themeToggle) {
-        class ThemeManager {
-            constructor() {
-                this.themeToggle = themeToggle;
-                this.toggleThumb = document.querySelector('.toggle-thumb');
-                this.toggleLabel = document.querySelector('.toggle-label');
-                this.preferredTheme = localStorage.getItem('theme');
-                this.systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-                this.init();
-            }
-            init() {
-                this.applyTheme();
-                this.themeToggle.addEventListener('click', () => this.toggleTheme());
-                this.systemPrefersDark.addEventListener('change', (e) => {
-                    if (!localStorage.getItem('theme')) {
-                        this.setTheme(e.matches ? 'dark' : 'light');
-                    }
-                });
-                document.body.classList.add('theme-transition');
-            }
-            applyTheme() {
-                let theme = 'light';
-                if (this.preferredTheme) theme = this.preferredTheme;
-                else if (this.systemPrefersDark.matches) theme = 'dark';
-                this.setTheme(theme);
-            }
-            setTheme(theme) {
-                const isDark = theme === 'dark';
-                if (isDark) document.body.classList.add('dark-theme');
-                else document.body.classList.remove('dark-theme');
-                if (this.toggleThumb && this.toggleLabel) {
-                    this.toggleLabel.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-                    this.toggleThumb.style.transform = isDark ? 'translateX(30px)' : 'translateX(3px)';
-                }
-                localStorage.setItem('theme', theme);
-                document.dispatchEvent(new CustomEvent('themeChange', { detail: { theme } }));
-            }
-            toggleTheme() {
-                this.setTheme(document.body.classList.contains('dark-theme') ? 'light' : 'dark');
-            }
-            getCurrentTheme() {
-                return document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-            }
-        }
-
-        const themeManager = new ThemeManager();
-        window.themeManager = themeManager;
-    }
+    // Theme Toggle logic removed (Site is now exclusively Dark Mode)
 
     // ===== Hamburger Menu =====
     const hamburgerBtn = document.getElementById('hamburgerBtn');

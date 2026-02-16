@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
 </head>
 
-<body>
+<body class="dark-theme">
 
     <!-- Header & Navigation -->
     <header class="header">
@@ -41,18 +41,6 @@
 
             <!-- Right Side Controls -->
             <div class="nav-controls">
-                <!-- Theme Toggle -->
-                <div class="theme-toggle-wrapper">
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                        <div class="toggle-track">
-                            <div class="toggle-thumb">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
-                            </div>
-                        </div>
-                        <span class="toggle-label">Dark Mode</span>
-                    </button>
-                </div>
 
                 <!-- Hamburger Button (Visible only on mobile) -->
                 <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false">
@@ -109,37 +97,76 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- Decorative background elements -->
-        <div class="decoration decoration-1"></div>
-        <div class="decoration decoration-2"></div>
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <!-- Left Content -->
+            <div class="hero-content">
+                <span class="greeting">👋 Welcome to my portfolio</span>
 
-        <div class="container hero-content">
-            <!-- Text Content -->
-            <div class="hero-text">
-                <h1 class="her">Ad<span>i</span>l Al<span>i</span></h1>
-                <p class="title">Website and Apps Developer</p>
-                <p>Creating responsive, user-centered web applications with modern technologies and clean code.</p>
-            </div>
+                <h1>
+                    Hi, I'm <span class="name-highlight">Adil Ali</span>
+                </h1>
 
-            <!-- Circular Image (appears before buttons on mobile) -->
-            <div class="hero-image">
-                <div class="avatar">
-                    <img src="picture/mypicture2.jpeg" alt="Adil Ali">
-                    <div
-                        style="width:100%; height:100%; background: linear-gradient(45deg, #1a1a2e, #00adb5); display:flex; align-items:center; justify-content:center; color:white; font-weight:600; font-size:1.5rem; text-align:center; padding:20px;">
-                        <div>
-                            <div style="font-size:2rem; margin-bottom:10px;">AA</div>
-                            Adil Ali
-                        </div>
-                    </div>
+                <div class="title">
+                    Web Developer & Student
+                </div>
+
+                <p class="description">
+                    DAE CIT 2nd Year student passionate about building
+                    modern web applications. I create responsive and
+                    user-friendly websites.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="cta-group">
+                    <a href="#projects" class="btn-primary">
+                        View Projects <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 0.9rem;"></i>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
 
-            <!-- Buttons (appear after image on mobile) -->
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <!-- Right Content - Photo -->
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <!-- APNI PHOTO YAHAN LAGAYEIN -->
+                    <img src="picture/mypicture2.jpeg" alt="Rahul Sharma - Web Developer" class="profile-img">
+                    <!-- 
+                        Replace above line with:
+                        <img src="your-photo.jpg" alt="Your Name" class="profile-img">
+                    -->
+
+                    <!-- Simple Badge -->
+                    <div class="availability-badge">
+                        Open to Work
+                    </div>
+                </div>
+
+                <!-- Simple Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Skills</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -174,7 +201,94 @@
             </div>
         </div>
     </section>
+    <!-- Education Section -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-subtitle">Academics</div>
+                <h2 class="section-title">
+                    My <span>Education</span> Journey
+                </h2>
+                <p class="section-description">
+                    Building strong foundation in Computer Science and Web Development
+                </p>
+            </div>
 
+            <!-- Education Grid - Main Cards -->
+            <div class="education-grid">
+                <!-- Card 1: Current Degree -->
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-degree">SSC (Matric)</h3>
+                    <div class="card-institution">
+                        <i class="fas fa-university"></i>
+                        <span>Boys Government School Behal</span>
+                    </div>
+                    <div class="card-duration">
+                        <i class="far fa-calendar-alt" style="margin-right: 5px;"></i>
+                        2023 - 2024
+                    </div>
+                    <p class="card-description">
+                        Completed secondary education with focus on Science subjects. Built strong foundation in
+                        Mathematics, Physics, and Computer Science.
+                    </p>
+                </div>
+
+                <!-- Card 2: 12th Grade -->
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="card-degree">DAE CIT (Computer Information Technology)</h3>
+                    <div class="card-institution">
+                        <i class="fas fa-school"></i>
+                        <span>Government College of Technology Bhakkar</span>
+                    </div>
+                    <div class="card-duration">
+                        <i class="far fa-calendar-alt" style="margin-right: 5px;"></i>
+                        2025-present
+                    </div>
+                    <p class="card-description">
+                        Pursuing comprehensive education in computer systems,
+                        programming, networking, and software development. Focus on practical skills and
+                        industry-relevant technologies.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <!-- Achievements / Stats -->
+            <div class="achievements">
+
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="achievement-number">8+</div>
+                    <div class="achievement-text">Certifications</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="achievement-number">5+</div>
+                    <div class="achievement-text">Projects</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="achievement-number">5★</div>
+                    <div class="achievement-text">HackerRank</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
