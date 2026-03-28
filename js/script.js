@@ -59,10 +59,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // If form is valid
             if (isValid) {
-                contactForm.submit();
-                contactForm.reset();
-                document.querySelectorAll('.form-control').forEach(input => {
-                    input.style.borderColor = '#e2e8f0';
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    const status = document.getElementById("form-status");
+                    if (response.ok) {
+                        status.style.display = "block";
+                        status.style.color = "#38b2ac"; // Theme success color
+                        status.innerHTML = "Message sent successfully! 😊";
+                        contactForm.reset();
+                        document.querySelectorAll('.form-control').forEach(input => {
+                            input.style.borderColor = '#e2e8f0';
+                        });
+                        setTimeout(() => {
+                            status.style.display = "none";
+                        }, 5000);
+                    } else {
+                        status.style.display = "block";
+                        status.style.color = "#e53e3e"; // Theme error color
+                        status.innerHTML = "Oops! There was a problem submitting your form.";
+                    }
+                }).catch(error => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    const status = document.getElementById("form-status");
+                    status.style.display = "block";
+                    status.style.color = "#e53e3e";
+                    status.innerHTML = "Oops! There was a problem submitting your form.";
                 });
             }
         });
