@@ -59,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // If form is valid
             if (isValid) {
-                // TEMP: Safe alert instead of fetch to localhost
-                alert("Form validation successful (backend disabled)");
+                contactForm.submit();
                 contactForm.reset();
                 document.querySelectorAll('.form-control').forEach(input => {
                     input.style.borderColor = '#e2e8f0';
