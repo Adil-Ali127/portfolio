@@ -526,6 +526,7 @@
  /* CTA Buttons */
  .cta-group {
      display: flex;
+     flex-wrap: wrap;
      gap: 1rem;
      margin-bottom: 2.5rem;
      animation: fadeInUp 0.8s ease 0.6s both;
@@ -565,6 +566,23 @@
  .btn-secondary:hover {
      border-color: #2DD4BF;
      color: #2DD4BF;
+     transform: translateY(-3px);
+ }
+
+ .btn-outline {
+     display: inline-block;
+     padding: 0.8rem 2rem;
+     background: transparent;
+     color: #2DD4BF;
+     text-decoration: none;
+     font-weight: 600;
+     border-radius: 50px;
+     border: 2px solid #2DD4BF;
+     transition: all 0.3s ease;
+ }
+
+ .btn-outline:hover {
+     background: rgba(45, 212, 191, 0.1);
      transform: translateY(-3px);
  }
 
@@ -1693,7 +1711,7 @@
  footer {
      background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
      color: white;
-     padding: 5rem 0 3rem;
+     padding: 3rem 0 1.5rem;
      text-align: center;
      border-top: 4px solid var(--accent-teal);
      position: relative;
@@ -1727,8 +1745,8 @@
  .footer-logo {
      font-family: 'Poppins', sans-serif;
      font-weight: 700;
-     font-size: 2.2rem;
-     margin-bottom: 1.2rem;
+     font-size: 2rem;
+     margin-bottom: 0.5rem;
      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
      cursor: pointer;
      position: relative;
@@ -1746,16 +1764,16 @@
 
  .footer-content p {
      color: var(--gray-medium);
-     font-size: 1.1rem;
+     font-size: 1rem;
      max-width: 400px;
-     margin-bottom: 2rem;
+     margin-bottom: 1rem;
  }
 
  .copyright {
      color: var(--gray-medium);
-     margin-top: 2.5rem;
-     font-size: 0.95rem;
-     padding-top: 2rem;
+     margin-top: 1.5rem;
+     font-size: 0.9rem;
+     padding-top: 1.5rem;
      border-top: 1px solid rgba(255, 255, 255, 0.08);
      width: 100%;
      max-width: 500px;
